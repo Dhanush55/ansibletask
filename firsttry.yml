@@ -6,3 +6,5 @@
     - name: creating jenkins usererror
       become: true
       shell: useradd jenkins
+    - name: editing sudoers
+      shell : sudo echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
